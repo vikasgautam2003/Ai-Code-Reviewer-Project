@@ -143,10 +143,6 @@
 
 
 
-
-
-
-
 import { useState } from "react";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
@@ -154,6 +150,7 @@ import "prismjs/components/prism-javascript";
 import Editor from "react-simple-code-editor";
 import axios from "axios";
 import Markdown from "react-markdown";
+import "./App.css"; // Make sure your CSS includes scrollbar styling below
 
 function App() {
   const [code, setCode] = useState(`function sum(a, b) { return a + b; }`);
@@ -175,8 +172,9 @@ function App() {
   return (
     <main className="h-screen w-screen p-6 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 flex flex-col md:flex-row gap-6">
       
+      {/* Editor Panel */}
       <div className="flex-1 bg-gray-900 rounded-2xl shadow-2xl flex flex-col overflow-hidden relative">
-        <div className="flex-1 p-6 overflow-auto">
+        <div className="flex-1 p-6 overflow-auto scrollbar-thin scrollbar-thumb-gray-600/40 scrollbar-track-gray-900/20">
           <Editor
             value={code}
             onValueChange={(code) => setCode(code)}
@@ -195,7 +193,8 @@ function App() {
         </button>
       </div>
 
-      <div className="flex-1 bg-gray-800 rounded-2xl shadow-2xl p-8 overflow-auto max-h-full">
+      {/* Review Panel */}
+      <div className="flex-1 bg-gray-800 rounded-2xl shadow-2xl p-8 overflow-auto max-h-full scrollbar-thin scrollbar-thumb-gray-600/40 scrollbar-track-gray-900/20">
         {review ? (
           <Markdown
             children={review}
