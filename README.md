@@ -22,7 +22,7 @@ An AI-powered platform that intelligently reviews and analyzes your code, highli
 It is designed for simplicity and power — paste your code, review instantly, and understand the “why” behind every suggestion.  
 With a sleek UI, dark-neon theme, and quick response time, Syntaxly.ai feels less like a tool — and more like your personal AI coding mentor.
 
-![Project Screenshot](public/code.png)
+![Project Screenshot](FrontEnd/public/code.png)
 
 ---
 
