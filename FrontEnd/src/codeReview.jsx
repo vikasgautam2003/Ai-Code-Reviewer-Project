@@ -17,8 +17,12 @@ function CodeReview() {
   async function reviewCode() {
     try {
       setLoading(true);
-      setReview(""); // Clear previous review while new one loads
-      const response = await axios.post("http://localhost:3000/ai/get-review", { code });
+      setReview(""); 
+        const response = await axios.post(
+        `https://syntaxly-ai.onrender.com/ai/get-review`,
+        { code }
+        );
+
       setReview(response.data);
     } catch (err) {
       console.error(err);
