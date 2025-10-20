@@ -1,3 +1,4 @@
+# ⚡ Syntaxly.ai — AI Code Reviewer
 
 An AI-powered platform that intelligently reviews and analyzes your code, highlighting issues and suggesting improvements. Built with **React**, **Node.js**, and **Gemini AI API**, Syntaxly.ai streamlines code review for developers through an elegant, neon-themed interface and real-time analysis.
 
